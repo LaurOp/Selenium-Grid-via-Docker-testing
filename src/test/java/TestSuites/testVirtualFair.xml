@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="VIRTUAL_FAIR test scenario"  preserve-order="false">
+
+    <listeners>
+        <listener class-name="TestSuites.Listener"/>
+    </listeners>
+
+    <test name="Virtual_Fair tests">
+        <classes>
+            <class name="VirtualFairTestCases.ConferenceHallRedirectsTest"/>
+            <class name="VirtualFairTestCases.EnterButtonRedirectsToHallTest"/>
+            <class name="VirtualFairTestCases.InfoBoothRedirectsTest"/>
+            <class name="VirtualFairTestCases.JobsHallRedirectsTest"/>
+            <class name="VirtualFairTestCases.ChatRestrictedToLoggedInTest"/>
+            <class name="VirtualFairTestCases.AmphitheaterPlayRedirectsToZoomTest"/>
+            <class name="VirtualFairTestCases.BackArrowRedirectsToHallTest"/>
+            <class name="VirtualFairTestCases.BrowserBackArrowBackToHallTest"/>
+            <class name="VirtualFairTestCases.JobCounterWorksTest"/>
+            <class name="VirtualFairTestCases.JobCardsViewCountTest"/>
+        </classes>
+
+    </test>
+
+
+</suite>

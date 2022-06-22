@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="LOGIN test scenario"  preserve-order="true">
+
+    <listeners>
+        <listener class-name="TestSuites.Listener"/>
+    </listeners>
+
+    <test name="Login tests">
+        <classes>
+            <class name="LoginTestCases.BackButtonLoginTest"/>
+            <class name="LoginTestCases.BackButtonLogoutTest"/>
+            <class name="LoginTestCases.BlankLoginTest"/>
+            <class name="LoginTestCases.CheckForSSLTest"/>
+            <class name="LoginTestCases.CookiesClearedAskCredentialsTest"/>
+            <class name="LoginTestCases.CreateAccRedirectsTest"/>
+            <class name="LoginTestCases.EnterDoesSignInTest"/>
+            <class name="LoginTestCases.FocusedOnUsernameTest"/>
+            <class name="LoginTestCases.ForgotPassOpensTest"/>
+            <class name="LoginTestCases.InvalidCredentialsLoginTest"/>
+            <class name="LoginTestCases.InvalidPassLoginTest"/>
+            <class name="LoginTestCases.InvalidUsernameLoginTest"/>
+            <class name="LoginTestCases.LimitLoginAttemptsTest"/>
+            <class name="LoginTestCases.LoginContainsAllFieldsTest"/>
+            <class name="LoginTestCases.LoginRedirectsHomeTest"/>
+            <class name="LoginTestCases.LoginWorksWithoutCookiesTest"/>
+            <class name="LoginTestCases.LogoutRedirectToHomeTest"/>
+            <class name="LoginTestCases.MultipleAccountsSameBrowserTest"/>
+            <class name="LoginTestCases.MultipleBrowsersTest"/>
+            <class name="LoginTestCases.PageURLnoLoginTest"/>
+            <class name="LoginTestCases.PassCopyPastedTest"/>
+            <class name="LoginTestCases.PassEncryptedTest"/>
+            <class name="LoginTestCases.PassNoDecipherTest"/>
+            <class name="LoginTestCases.PassNotInCookiesTest"/>
+            <class name="LoginTestCases.SpacesBeforePassTest"/>
+            <class name="LoginTestCases.TabFunctionalityTest"/>
+            <class name="LoginTestCases.TimeTakenToLogInTest"/>
+            <class name="LoginTestCases.UserCaseSensitiveTest"/>
+            <class name="LoginTestCases.ValidationMessageDisplayedTest"/>
+            <class name="LoginTestCases.ValidCredentialsLoginTest"/>
+            <class name="LoginTestCases.ValidPlaceholdersTest"/>
+            <class name="LoginTestCases.VerifyIDinRequestTest"/>
+<!--            <class name="LoginTestCases.WaysToRetrievePassTest"/>-->
+        </classes>
+    </test>
+
+
+</suite>
