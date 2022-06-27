@@ -21,11 +21,12 @@ public class EnterDoesSignInTest extends BaseForLogin {
         driver.findElement(loginPass).sendKeys(loginpassword + Keys.RETURN);
 
         try{
-            WebDriverWait wait = new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.of(10, ChronoUnit.SECONDS));
             wait.until(ExpectedConditions.visibilityOfElementLocated(logoutButton));
 
             driver.findElement(logoutButton).click();
         }catch (Exception e){
+            e.printStackTrace();
             Assert.fail();
         }
 

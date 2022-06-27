@@ -9,7 +9,7 @@ import org.testng.ITestResult;
 
 import java.util.ArrayList;
 
-public class Listener implements ITestListener {
+public class  Listener implements ITestListener {
 
         public static Logger log = LogManager.getLogger();
 

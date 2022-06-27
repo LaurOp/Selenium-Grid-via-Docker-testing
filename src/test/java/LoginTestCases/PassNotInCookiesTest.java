@@ -25,14 +25,18 @@ public class PassNotInCookiesTest extends BaseForLogin {
         }
 
 
-        driver.findElement(loginButton).click();
-
-        driver.findElement(loginEmail).sendKeys(loginmail);
-        driver.findElement(loginPass).sendKeys(loginpassword);
-        driver.findElement(loginSignInButton).click();
-
         try{
             WebDriverWait wait = new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
+
+            wait.until(ExpectedConditions.elementToBeClickable(loginButton));
+            driver.findElement(loginButton).click();
+
+            wait.until(ExpectedConditions.visibilityOfElementLocated(loginEmail));
+            driver.findElement(loginEmail).sendKeys(loginmail);
+            driver.findElement(loginPass).sendKeys(loginpassword);
+            driver.findElement(loginSignInButton).click();
+
+
             wait.until(ExpectedConditions.visibilityOfElementLocated(logoutButton));
 
 
@@ -48,6 +52,7 @@ public class PassNotInCookiesTest extends BaseForLogin {
                 }
             }
 
+            wait.until(ExpectedConditions.visibilityOfElementLocated(logoutButton));
             driver.findElement(logoutButton).click();
         }catch (Exception e){
             Assert.fail();

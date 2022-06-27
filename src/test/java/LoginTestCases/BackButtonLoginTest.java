@@ -21,7 +21,7 @@ public class BackButtonLoginTest extends BaseForLogin {
         }catch (Exception ignored){
         }
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.of(10, ChronoUnit.SECONDS));
 
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(loginButton)));
         driver.findElement(loginButton).click();
@@ -40,6 +40,7 @@ public class BackButtonLoginTest extends BaseForLogin {
             wait.until(ExpectedConditions.visibilityOfElementLocated(logoutButton));
             driver.findElement(logoutButton).click();
         }catch (Exception e){
+            e.printStackTrace();
             Assert.fail();
         }
     }

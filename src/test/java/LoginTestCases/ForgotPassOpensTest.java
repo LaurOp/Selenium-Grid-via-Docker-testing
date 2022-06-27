@@ -26,24 +26,33 @@ public class ForgotPassOpensTest extends BaseForLogin
         }catch (Exception ignored){
         }
 
-        driver.findElement(loginButton).click();
 
         try{
             WebDriverWait wait = new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
 
+            wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton));
+            driver.findElement(loginButton).click();
+
+            System.out.println(1);
+
+            wait.until(ExpectedConditions.visibilityOfElementLocated(loginForgot));
             WebElement forgotLink = driver.findElement(loginForgot);
+
+            System.out.println(2);
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", forgotLink);
-            forgotLink.click();
 
-            System.out.println("Forgot password clicked");
+            JavascriptExecutor ex=(JavascriptExecutor)driver;
+            ex.executeScript("arguments[0].click()", forgotLink);
 
-            WebElement resetPassText = driver.findElement(By.xpath("//h1[text()='Recover your password']"));
-            wait.until(ExpectedConditions.visibilityOf(resetPassText));
+            System.out.println(3);
 
-            WebElement emailTextBox = driver.findElement(with(By.xpath("//input[@placeholder='Email']")).below(resetPassText));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[text()='Recover your password']")));
+            //WebElement emailTextBox = driver.findElement(with(By.xpath("//input[@placeholder='Email']")).below(resetPassText));
 
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(@class,'close-button')]")));
             driver.findElement(By.xpath("//span[contains(@class,'close-button')]")).click();
         }catch (Exception e){
+            e.printStackTrace();
             Assert.fail();
         }
     }

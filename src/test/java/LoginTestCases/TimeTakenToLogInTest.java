@@ -22,17 +22,22 @@ public class TimeTakenToLogInTest extends BaseForLogin {
         }catch (Exception ignored){
         }
 
-        driver.findElement(loginButton).click();
-
-        driver.findElement(loginEmail).sendKeys(loginmail);
-        driver.findElement(loginPass).sendKeys(loginpassword);
-
-        long startTime = System.currentTimeMillis();
-        driver.findElement(loginSignInButton).click();
 
 
 
         try{
+            wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton));
+            driver.findElement(loginButton).click();
+
+            wait.until(ExpectedConditions.visibilityOfElementLocated(loginEmail));
+            driver.findElement(loginEmail).sendKeys(loginmail);
+            driver.findElement(loginPass).sendKeys(loginpassword);
+
+            wait.until(ExpectedConditions.visibilityOfElementLocated(loginSignInButton));
+            long startTime = System.currentTimeMillis();
+            driver.findElement(loginSignInButton).click();
+
+
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body")));
 
             long endTime = System.currentTimeMillis();
@@ -40,13 +45,15 @@ public class TimeTakenToLogInTest extends BaseForLogin {
 
             System.out.println("Time taken to log in: " +  totalTime + " seconds");
 
+            wait = new WebDriverWait(driver, Duration.of(10, ChronoUnit.SECONDS));
             wait.until(ExpectedConditions.visibilityOfElementLocated(logoutButton));
             driver.findElement(logoutButton).click();
 
             Assert.assertTrue(totalTime < 3000);
 
 
-        }catch (Exception ignored){
+        }catch (Exception e){
+            e.printStackTrace();
             Assert.fail();
         }
 

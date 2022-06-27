@@ -22,14 +22,20 @@ public class LogoutRedirectToHomeTest extends BaseForLogin {
         }catch (Exception ignored){
         }
 
-        driver.findElement(loginButton).click();
 
-        driver.findElement(loginEmail).sendKeys(loginmail);
-        driver.findElement(loginPass).sendKeys(loginpassword);
-        driver.findElement(loginSignInButton).click();
 
         try{
             WebDriverWait wait = new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
+
+            wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton));
+            driver.findElement(loginButton).click();
+
+            wait.until(ExpectedConditions.visibilityOfElementLocated(loginEmail));
+            driver.findElement(loginEmail).sendKeys(loginmail);
+            driver.findElement(loginPass).sendKeys(loginpassword);
+            driver.findElement(loginSignInButton).click();
+
+
             wait.until(ExpectedConditions.visibilityOfElementLocated(logoutButton));
 
             WebElement logoutBut = driver.findElement(logoutButton);
@@ -37,6 +43,7 @@ public class LogoutRedirectToHomeTest extends BaseForLogin {
 
             Assert.assertEquals(logoutRedirectsTo, url);
         }catch (Exception e){
+            e.printStackTrace();
             Assert.fail();
         }
 

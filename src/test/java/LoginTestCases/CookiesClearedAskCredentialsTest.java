@@ -23,19 +23,24 @@ public class CookiesClearedAskCredentialsTest extends BaseForLogin {
         catch (Exception ignored){
         }
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton));
-        driver.findElement(loginButton).click();
+        try{
+            wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton));
+            driver.findElement(loginButton).click();
 
-        driver.findElement(loginEmail).sendKeys(loginmail);
-        driver.findElement(loginPass).sendKeys(loginpassword);
-        driver.findElement(loginSignInButton).click();
+            driver.findElement(loginEmail).sendKeys(loginmail);
+            driver.findElement(loginPass).sendKeys(loginpassword);
+            driver.findElement(loginSignInButton).click();
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(logoutButton));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(logoutButton));
 
-        driver.manage().deleteAllCookies();
+            driver.manage().deleteAllCookies();
 
-        driver.navigate().to("https://careersinwhite.com/Inbox/");
+            driver.navigate().to("https://careersinwhite.com/Inbox/");
 
+        }
+        catch (Exception e){
+            Assert.fail();
+        }
         try{
             wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton));
 

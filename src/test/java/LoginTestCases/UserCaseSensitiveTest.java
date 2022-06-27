@@ -15,7 +15,7 @@ public class UserCaseSensitiveTest extends BaseForLogin {
 
 
 
-    @Test
+    @Test   //(invocationCount = 5)
     public void userCaseSensitive(){
         driver.get(url);
 
@@ -36,13 +36,15 @@ public class UserCaseSensitiveTest extends BaseForLogin {
         driver.findElement(loginSignInButton).click();
 
         try{
-            WebDriverWait wait = new WebDriverWait(driver, Duration.of(3, ChronoUnit.SECONDS));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.of(10, ChronoUnit.SECONDS));
 
             wait.until(ExpectedConditions.visibilityOfElementLocated(logoutButton));
+
             driver.findElement(logoutButton).click();
-            Assert.fail();
         }
-        catch (Exception ignored){
+        catch (Exception e){
+            e.printStackTrace();
+            Assert.fail();
         }
 
     }

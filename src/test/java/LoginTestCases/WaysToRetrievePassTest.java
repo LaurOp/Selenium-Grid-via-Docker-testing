@@ -38,7 +38,9 @@ public class WaysToRetrievePassTest extends BaseForLogin {
 
             WebElement forgotLink = driver.findElement(loginForgot);
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", forgotLink);
-            forgotLink.click();
+
+            JavascriptExecutor ex=(JavascriptExecutor)driver;
+            ex.executeScript("arguments[0].click()", forgotLink);
 
             System.out.println("Forgot password clicked");
 

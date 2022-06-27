@@ -5,16 +5,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class BaseForLogin {
+
+
 
     static protected String url = "https://careersinwhite.com/";
 
@@ -36,27 +42,37 @@ public class BaseForLogin {
     static protected String loginpassword = "passQA123";
 
 
-    static public WebDriver driver;
+    protected WebDriver driver;
 
-    @BeforeSuite
-    public void setup(){
+    @BeforeMethod
+    public void setup() throws MalformedURLException {
         WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.firefoxdriver().setup();
 
-        var options = new ChromeOptions();
-        options.addArguments("--user-data-dir=C:\\Users\\lauro\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1");
-        Map<String, Object> prefs = new HashMap<String, Object>();
-        prefs.put("network.cookie.cookieBehavior", 2);
 
-        options.setExperimentalOption("prefs", prefs);
+        DesiredCapabilities dc = new DesiredCapabilities();
+        dc.setCapability("browserName", "chrome");
 
-        driver = new ChromeDriver(options);
+
+//        var options = new ChromeOptions();
+//        options.addArguments("--user-data-dir=C:\\Users\\lauro\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1");
+//        Map<String, Object> prefs = new HashMap<String, Object>();
+//        prefs.put("network.cookie.cookieBehavior", 2);
+//
+//        options.setExperimentalOption("prefs", prefs);
+
+
+        driver = new RemoteWebDriver(new URL("http://localhost:4444"), dc);
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
     }
 
-    @AfterSuite
+    @AfterMethod
     public void cleanup(){
         driver.quit();
     }
+
 
 }

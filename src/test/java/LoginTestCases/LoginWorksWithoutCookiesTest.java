@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 public class LoginWorksWithoutCookiesTest extends BaseForLogin {
 
 
-    @Test
+    @Test //(invocationCount = 5)
     public void loginWorksWithoutCookies(){
         var options = new ChromeOptions();
         Map<String, Object> prefs = new HashMap<String, Object>();
@@ -55,18 +55,22 @@ public class LoginWorksWithoutCookiesTest extends BaseForLogin {
             WebDriverWait wait = new WebDriverWait(driverNoCookies, Duration.of(5, ChronoUnit.SECONDS));
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body")));
 
+            wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton));
             driverNoCookies.findElement(loginButton).click();
 
+            wait.until(ExpectedConditions.visibilityOfElementLocated(loginEmail));
             driverNoCookies.findElement(loginEmail).sendKeys(loginmail);
             driverNoCookies.findElement(loginPass).sendKeys(loginpassword);
             driverNoCookies.findElement(loginSignInButton).click();
 
+            wait = new WebDriverWait(driverNoCookies, Duration.of(10, ChronoUnit.SECONDS));
             wait.until(ExpectedConditions.visibilityOfElementLocated(logoutButton));
             driverNoCookies.findElement(logoutButton).click();
 
             driverNoCookies.quit();
 
-        }catch (Exception ignored){
+        }catch (Exception e){
+            e.printStackTrace();
             driverNoCookies.quit();
             Assert.fail();
         }

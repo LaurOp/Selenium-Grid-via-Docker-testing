@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
 
 public class PassCopyPastedTest extends BaseForLogin {
 
-    @Test
+    @Test   //(invocationCount = 5)
     public void passCopyPasted(){
         driver.get(url);
 
@@ -24,7 +24,7 @@ public class PassCopyPastedTest extends BaseForLogin {
         WebDriverWait wait = new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
 
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton));
+        wait.until(ExpectedConditions.elementToBeClickable(loginButton));
         driver.findElement(loginButton).click();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(loginEmail));
@@ -32,14 +32,16 @@ public class PassCopyPastedTest extends BaseForLogin {
         driver.findElement(loginEmail).sendKeys(loginmail);
         driver.findElement(loginPass).sendKeys(Keys.chord(Keys.CONTROL, "v"));
 
+        wait.until(ExpectedConditions.elementToBeClickable(loginSignInButton));
         driver.findElement(loginSignInButton).click();
 
-
+        wait = new WebDriverWait(driver, Duration.of(10, ChronoUnit.SECONDS));
         try{
             wait.until(ExpectedConditions.visibilityOfElementLocated(logoutButton));
 
             driver.findElement(logoutButton).click();
         }catch (Exception e){
+            e.printStackTrace();
             Assert.fail();
         }
 

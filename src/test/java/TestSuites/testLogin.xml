@@ -7,6 +7,13 @@
         <listener class-name="TestSuites.Listener"/>
     </listeners>
 
+<!--    timp cu selenium-grid standalone: -->
+<!--    2 threaduri -> 3'10" -->
+<!--    3 threaduri -> 2'26" -->
+<!--    4 threaduri ->  3'10" -->
+<!--    8 threaduri -> 4'37" -->
+
+<!--    <test name="Login tests" parallel="true" thread-count="3">-->
     <test name="Login tests">
         <classes>
             <class name="LoginTestCases.BackButtonLoginTest"/>
@@ -26,7 +33,7 @@
             <class name="LoginTestCases.LoginRedirectsHomeTest"/>
             <class name="LoginTestCases.LoginWorksWithoutCookiesTest"/>
             <class name="LoginTestCases.LogoutRedirectToHomeTest"/>
-            <class name="LoginTestCases.MultipleAccountsSameBrowserTest"/>
+<!--            <class name="LoginTestCases.MultipleAccountsSameBrowserTest"/>-->
             <class name="LoginTestCases.MultipleBrowsersTest"/>
             <class name="LoginTestCases.PageURLnoLoginTest"/>
             <class name="LoginTestCases.PassCopyPastedTest"/>

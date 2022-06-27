@@ -29,6 +29,7 @@ public class PageURLnoLoginTest extends BaseForLogin {
             System.out.println(response);
 
         }catch (Exception e){
+            e.printStackTrace();
             Assert.fail();
         }
 

@@ -11,9 +11,9 @@ import java.time.temporal.ChronoUnit;
 
 public class BackButtonLogoutTest extends BaseForLogin {
 
-    @Test (invocationCount = 10)
+    @Test //(invocationCount = 10)
     public void backButtonLogout(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.of(10, ChronoUnit.SECONDS));
 
         driver.get(url);
 
