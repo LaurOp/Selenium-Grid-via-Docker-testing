@@ -14,7 +14,7 @@ public class PassNotInCookiesTest extends BaseForLogin {
 
 
 
-    @Test
+    @Test   (groups = "cookies")
     public void passNotInCookies(){
         driver.get(url);
 
@@ -26,7 +26,7 @@ public class PassNotInCookiesTest extends BaseForLogin {
 
 
         try{
-            WebDriverWait wait = new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.of(15, ChronoUnit.SECONDS));
 
             wait.until(ExpectedConditions.elementToBeClickable(loginButton));
             driver.findElement(loginButton).click();

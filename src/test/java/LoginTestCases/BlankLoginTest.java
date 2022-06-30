@@ -7,7 +7,7 @@ import static org.testng.Assert.assertEquals;
 
 public class BlankLoginTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "credentials")
     public void blankLogin(){
         driver.get(url);
 

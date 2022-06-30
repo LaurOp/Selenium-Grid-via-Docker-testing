@@ -17,7 +17,7 @@ import static org.openqa.selenium.support.locators.RelativeLocator.with;
 public class ForgotPassOpensTest extends BaseForLogin
 {
 
-    @Test
+    @Test   (groups = "redirects")
     public void forgotPassOpens(){
         driver.get(url);
 

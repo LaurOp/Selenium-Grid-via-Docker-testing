@@ -14,6 +14,5 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class DockerBaseForLogin {
-
+public class DockerBaseForLogin {   // TO BE UPDATED; will allow the suite to run either on  grid or locally
 }

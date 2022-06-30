@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.TimeUnit;
 
-public class BaseForAPIs {
+public class BaseForAPIs {  // UNUSED
 
     public static WebDriver driver;
     public static WebDriverWait wait;

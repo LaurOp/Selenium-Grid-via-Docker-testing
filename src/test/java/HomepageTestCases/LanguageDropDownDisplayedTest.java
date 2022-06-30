@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class LanguageDropDownDisplayedTest extends BaseForHomepage {
 
-    @Test
+    @Test   (groups = "homepageFirsts")
     public void languageDropDownDisplayedTest() {
         driver.get(url);
 

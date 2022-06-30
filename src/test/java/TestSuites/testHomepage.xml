@@ -9,7 +9,13 @@
 
     <test name="Homepage tests">
         <classes>
-            <class name="HomepageTestCases.DefaultLanguageEnglishTest" />
+            <class name="HomepageTestCases.DefaultLanguageEnglishTest">
+                <methods>
+                    <parameter name="language" value="en"/>
+                    <include name="testDefaultLanguageEnglishTest"/>
+                </methods>
+            </class>
+
             <class name="HomepageTestCases.LanguageDropDownDisplayedTest"/>
             <class name="HomepageTestCases.LogoClickableTest"/>
             <class name="HomepageTestCases.LogoDoesntRefreshTest"/>

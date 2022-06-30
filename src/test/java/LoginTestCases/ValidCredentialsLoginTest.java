@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
 public class ValidCredentialsLoginTest extends BaseForLogin {
 
 
-    @Test
+    @Test   (groups = "credentials")
     public void validCredentialsLogin(){
         driver.get(url);
         try{

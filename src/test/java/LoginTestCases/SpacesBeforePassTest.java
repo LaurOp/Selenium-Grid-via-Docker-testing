@@ -7,7 +7,7 @@ import static org.testng.Assert.assertEquals;
 
 public class SpacesBeforePassTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "credentials")
     public void spacesBeforePass() {
         driver.get(url);
 

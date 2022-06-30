@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
 
 public class PassCopyPastedTest extends BaseForLogin {
 
-    @Test   //(invocationCount = 5)
+    @Test      (groups = "UI")//(invocationCount = 5)
     public void passCopyPasted(){
         driver.get(url);
 

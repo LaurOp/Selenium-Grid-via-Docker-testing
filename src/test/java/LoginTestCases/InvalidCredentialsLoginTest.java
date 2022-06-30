@@ -14,7 +14,7 @@ import static org.testng.Assert.assertEquals;
 
 public class InvalidCredentialsLoginTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "credentials")
     public void invalidCredentialsLogin(){
         driver.get(url);
 
@@ -24,7 +24,7 @@ public class InvalidCredentialsLoginTest extends BaseForLogin {
         }
 
         try{
-            WebDriverWait wait = new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.of(15, ChronoUnit.SECONDS));
 
             wait.until(ExpectedConditions.elementToBeClickable(loginButton));
             driver.findElement(loginButton).click();
@@ -38,6 +38,7 @@ public class InvalidCredentialsLoginTest extends BaseForLogin {
             assertEquals(driver.findElements(invalidLogin).size(), 1);
         }
         catch (Exception e){
+            e.printStackTrace();
             Assert.fail();
         }
 

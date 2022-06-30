@@ -14,7 +14,7 @@ import static org.testng.Assert.assertEquals;
 
 public class InvalidUsernameLoginTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "credentials")
     public void invalidUsernameLogin(){
         driver.get(url);
 

@@ -13,7 +13,7 @@ import static org.testng.Assert.assertTrue;
 
 public class ValidPlaceholdersTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "UI")
     public void validPlaceholders(){
         driver.get(url);
 

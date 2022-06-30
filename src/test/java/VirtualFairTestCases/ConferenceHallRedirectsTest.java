@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class ConferenceHallRedirectsTest extends BaseForVirtualFair {
 
-    @Test
+    @Test   (dependsOnGroups = "virtualfairFirsts")
     public void conferenceHallRedirectsTest() {
 
         try {

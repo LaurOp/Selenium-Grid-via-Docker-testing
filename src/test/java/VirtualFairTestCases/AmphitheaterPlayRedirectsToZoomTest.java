@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.Set;
@@ -13,8 +14,9 @@ import static java.lang.Thread.sleep;
 
 public class AmphitheaterPlayRedirectsToZoomTest extends BaseForVirtualFair {
 
+    @Parameters({"link"})
     @Test   //(invocationCount = 10)
-    public void amphitheaterRedirectZoomTest(){
+    public void amphitheaterRedirectZoomTest(String link){
         try{
             String currentHandle = driver.getWindowHandle();
 
@@ -33,7 +35,7 @@ public class AmphitheaterPlayRedirectsToZoomTest extends BaseForVirtualFair {
                 }
             }
 
-            Assert.assertTrue(driver.getCurrentUrl().contains("/zoom"));
+            Assert.assertTrue(driver.getCurrentUrl().contains(link));
             driver.close();
             driver.switchTo().window(currentHandle);
         }

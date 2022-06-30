@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class InfoBoothRedirectsTest extends BaseForVirtualFair {
 
-    @Test   //(invocationCount = 5)
+    @Test   (dependsOnGroups = "virtualfairFirsts")//(invocationCount = 5)
     public void infoBoothRedirectsTest() {
 
         try {

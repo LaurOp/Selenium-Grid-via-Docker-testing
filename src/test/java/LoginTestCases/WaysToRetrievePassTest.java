@@ -16,7 +16,7 @@ import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 public class WaysToRetrievePassTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups="security", enabled = false)
     public void waysToRetrievePass(){
         driver.get(url);
 

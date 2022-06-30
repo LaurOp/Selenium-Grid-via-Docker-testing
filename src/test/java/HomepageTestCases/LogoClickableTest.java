@@ -10,7 +10,7 @@ import java.time.temporal.ChronoUnit;
 
 public class LogoClickableTest extends BaseForHomepage {
 
-    @Test
+    @Test   (groups = "homepageFirsts")
     public void logoClickableTest() {
         driver.get(url);
 

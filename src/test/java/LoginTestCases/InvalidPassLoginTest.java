@@ -14,7 +14,7 @@ import static org.testng.Assert.assertEquals;
 
 public class InvalidPassLoginTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "credentials")
     public void invalidPassLogin(){
         driver.get(url);
 

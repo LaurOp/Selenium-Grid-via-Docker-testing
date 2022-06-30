@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class PageURLnoLoginTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "security")
     public void pageURLnoLogin(){
         driver.get(url);
 

@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -12,8 +14,9 @@ import java.time.temporal.ChronoUnit;
 
 public class CookiesClearedAskCredentialsTest extends BaseForLogin {
 
-    @Test
-    public void cookiesClearedAskCredentials() throws InterruptedException {
+    @Parameters({"restrictedUrl"})
+    @Test   (groups = "cookies")
+    public void cookiesClearedAskCredentials(@Optional("https://careersinwhite.com/Inbox/") String restrictedUrl) throws InterruptedException {
         driver.get(url);
         WebDriverWait wait = new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
 
@@ -35,7 +38,7 @@ public class CookiesClearedAskCredentialsTest extends BaseForLogin {
 
             driver.manage().deleteAllCookies();
 
-            driver.navigate().to("https://careersinwhite.com/Inbox/");
+            driver.navigate().to(restrictedUrl);
 
         }
         catch (Exception e){

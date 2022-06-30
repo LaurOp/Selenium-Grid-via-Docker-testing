@@ -13,7 +13,7 @@ import java.time.temporal.ChronoUnit;
 
 public class LoginRedirectsHomeTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "redirects")
     public void loginRedirectHome(){
         driver.get(url);
 

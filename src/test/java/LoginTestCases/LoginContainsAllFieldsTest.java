@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class LoginContainsAllFieldsTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "UI")
     public void loginContainsAllFields() throws InterruptedException{
         driver.get(url);
 

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class EnterButtonRedirectsToHallTest extends BaseForVirtualFair {
 
-    @Test
+    @Test   (groups = "virtualfairFirsts", alwaysRun = true)
     public void enterButtonRedirectsToHallTest() {
 
         try {

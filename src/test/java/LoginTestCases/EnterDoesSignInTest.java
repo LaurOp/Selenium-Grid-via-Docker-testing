@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
 
 public class EnterDoesSignInTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "redirects")
     public void enterDoesSignin(){
         driver.get(url);
         driver.findElement(loginButton).click();
@@ -21,7 +21,7 @@ public class EnterDoesSignInTest extends BaseForLogin {
         driver.findElement(loginPass).sendKeys(loginpassword + Keys.RETURN);
 
         try{
-            WebDriverWait wait = new WebDriverWait(driver, Duration.of(10, ChronoUnit.SECONDS));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.of(30, ChronoUnit.SECONDS));
             wait.until(ExpectedConditions.visibilityOfElementLocated(logoutButton));
 
             driver.findElement(logoutButton).click();

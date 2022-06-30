@@ -11,7 +11,7 @@ import java.time.temporal.ChronoUnit;
 
 public class VerifyIDinRequestTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "security")
     public void verifyIDinRequest(){
         driver.get(url);
 

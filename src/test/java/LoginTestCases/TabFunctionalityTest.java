@@ -15,7 +15,7 @@ import static org.testng.Assert.assertEquals;
 
 public class TabFunctionalityTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "UI")
     public void tabFunctionality(){
         driver.get(url);
         driver.findElement(loginButton).click();

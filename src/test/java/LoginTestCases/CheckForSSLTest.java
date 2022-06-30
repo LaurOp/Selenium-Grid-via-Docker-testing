@@ -8,7 +8,7 @@ import static org.testng.Assert.assertEquals;
 
 public class CheckForSSLTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "security")
     public void checkForSSLCertificate(){
         // SSL certificate would pop up in the browser, so we need to check if it's there
         try{

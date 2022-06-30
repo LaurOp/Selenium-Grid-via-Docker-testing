@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class JobsHallRedirectsTest extends BaseForVirtualFair {
-    @Test
+    @Test   (dependsOnGroups = "virtualfairFirsts")
     public void jobsHallRedirectsTest() {
 
         try {

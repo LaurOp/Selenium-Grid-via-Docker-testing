@@ -14,7 +14,7 @@ import java.time.temporal.ChronoUnit;
 
 public class MultipleAccountsSameBrowserTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "grid1")   // this will be a super-set of the other multiple browser tests; the other tests will depend on this one
     public void multipleAccountsSameBrowser(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
 

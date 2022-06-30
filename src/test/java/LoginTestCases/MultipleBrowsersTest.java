@@ -3,6 +3,8 @@ package LoginTestCases;
 import BaseClasses.BaseForLogin;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -13,7 +15,7 @@ import java.time.temporal.ChronoUnit;
 
 public class MultipleBrowsersTest extends BaseForLogin {
 
-    private class threadBodyMultipleBrowsers implements  Runnable { //thread body class
+    private static class threadBodyMultipleBrowsers implements  Runnable { //thread body class
 
         private final WebDriver browser;
 
@@ -39,11 +41,12 @@ public class MultipleBrowsersTest extends BaseForLogin {
         }
     }
 
-    @Test
+    @Test   (groups = "grid2", dependsOnGroups = "grid1")
     public void multipleBrowsers(){ // will use parallel testing; each browser has it's own thread
+        DesiredCapabilities dc = new DesiredCapabilities();
+        dc.setCapability("browserName", "firefox");
 
-        WebDriver driver2 = new FirefoxDriver();    // we'll use firefox as our second browser
-        driver2.manage().window().maximize();
+        WebDriver driver2 = new RemoteWebDriver(dc);    // we'll use firefox as our second browser
 
         try{
             var thr1 = new Thread(new threadBodyMultipleBrowsers(driver));
@@ -58,12 +61,12 @@ public class MultipleBrowsersTest extends BaseForLogin {
 
         }
         catch (Exception e){
-            driver2.close();
+            driver2.quit();
             Assert.fail();
         }
 
 
-        driver2.close();
+        driver2.quit();
     }
 
 }

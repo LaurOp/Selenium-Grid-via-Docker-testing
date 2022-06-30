@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class LogoDoesntRefreshTest extends BaseForHomepage {
 
-    @Test
+    @Test   (dependsOnGroups = "homepageFirsts")
     public void logoDoesntRefreshTest() {
         driver.get(url);
 

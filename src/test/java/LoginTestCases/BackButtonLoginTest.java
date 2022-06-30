@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
 public class BackButtonLoginTest extends BaseForLogin {
 
 
-    @Test   //(invocationCount = 10)
+    @Test     (groups = "redirects") //(invocationCount = 10)
     public void backButtonLogin(){
         driver.get(url);
 

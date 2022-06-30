@@ -7,11 +7,13 @@ import org.testng.annotations.Test;
 
 import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.IOException;
 import java.util.Arrays;
 
 public class PassNoDecipherTest extends BaseForLogin {
 
-    @Test
+    @Test     (groups = "security") //(invocationCount = 5)
     public void passNoDecipher(){
         driver.get(url);
 
@@ -26,14 +28,29 @@ public class PassNoDecipherTest extends BaseForLogin {
         driver.findElement(loginPass).sendKeys(loginpassword, Keys.chord(Keys.CONTROL, "a"),Keys.chord(Keys.CONTROL,"c"));
 
         try{
-            String myString = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
+            String myString = getClipboardString();
 
             Assert.assertNotEquals(loginpassword, myString);
         }
         catch (Exception e){
-            System.out.println(Arrays.toString(e.getStackTrace()));
+            e.printStackTrace();
             Assert.fail();
         }
 
     }
+
+
+
+    public static String getClipboardString() {
+        try {
+            return (String) Toolkit
+                    .getDefaultToolkit()
+                    .getSystemClipboard()
+                    .getData(DataFlavor.stringFlavor);
+        } catch (IllegalStateException | HeadlessException | IOException | UnsupportedFlavorException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

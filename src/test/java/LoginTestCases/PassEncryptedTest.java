@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
 
 public class PassEncryptedTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "security")
     public void passEncrypted(){
         driver.get(url);
 

@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
 
 public class TimeTakenToLogInTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "security")
     public void timeTakentoLogIn(){
         driver.get(url);
         WebDriverWait wait = new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));

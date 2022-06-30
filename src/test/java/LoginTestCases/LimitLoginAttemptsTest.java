@@ -13,7 +13,7 @@ import java.time.temporal.ChronoUnit;
 
 public class LimitLoginAttemptsTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "security")
     public void limitLoginAttempts(){   // let's say the limit is 15 unsuccessfuls in a row
         driver.get(url);
 

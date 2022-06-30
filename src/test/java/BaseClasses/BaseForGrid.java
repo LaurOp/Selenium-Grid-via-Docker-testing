@@ -10,7 +10,7 @@ import org.testng.annotations.AfterMethod;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class BaseForGrid {
+public class BaseForGrid {  // UNUSED CLASS, but kept for future reference
     protected WebDriver driver;
 
     protected WebDriver initialize(@NotNull String browserName) throws MalformedURLException {

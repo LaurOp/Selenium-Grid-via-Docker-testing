@@ -15,7 +15,7 @@ public class UserCaseSensitiveTest extends BaseForLogin {
 
 
 
-    @Test   //(invocationCount = 5)
+    @Test     (groups = "credentials") //(invocationCount = 5)
     public void userCaseSensitive(){
         driver.get(url);
 

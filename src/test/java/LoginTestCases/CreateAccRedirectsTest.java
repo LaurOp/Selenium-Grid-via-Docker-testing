@@ -13,7 +13,7 @@ import java.time.temporal.ChronoUnit;
 public class CreateAccRedirectsTest extends BaseForLogin {
 
 
-    @Test
+    @Test   (groups="redirects", enabled = false)//(invocationCount = 5)    disabled until I update the grid chrome version to 103
     public void createAccRedirects(){
         driver.get(url);
         WebDriverWait wait = new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
@@ -27,7 +27,7 @@ public class CreateAccRedirectsTest extends BaseForLogin {
         try{
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='cookieBtn']")));
             driver.findElement(By.xpath("//button[@class='cookieBtn']")).click();
-        }catch (Exception e){
+        }catch (Exception ignored){
         }
 
         try{

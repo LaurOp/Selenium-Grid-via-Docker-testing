@@ -8,7 +8,7 @@ import static org.testng.Assert.assertEquals;
 
 public class FocusedOnUsernameTest extends BaseForLogin {
 
-    @Test
+    @Test   (groups = "UI")
     public void focusedOnUsername() throws InterruptedException {
         driver.get(url);
 

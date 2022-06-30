@@ -14,7 +14,14 @@
             <class name="VirtualFairTestCases.InfoBoothRedirectsTest"/>
             <class name="VirtualFairTestCases.JobsHallRedirectsTest"/>
             <class name="VirtualFairTestCases.ChatRestrictedToLoggedInTest"/>
-            <class name="VirtualFairTestCases.AmphitheaterPlayRedirectsToZoomTest"/>
+
+            <class name="VirtualFairTestCases.AmphitheaterPlayRedirectsToZoomTest">
+                <methods>
+                    <parameter name="link" value="/zoom"/>
+                    <include name="testAmphitheaterPlayRedirectsToZoomTest"/>
+                </methods>
+            </class>
+
             <class name="VirtualFairTestCases.BackArrowRedirectsToHallTest"/>
             <class name="VirtualFairTestCases.BrowserBackArrowBackToHallTest"/>
             <class name="VirtualFairTestCases.JobCounterWorksTest"/>
