@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="methods" name="Failed suite [LOGIN test scenario]" guice-stage="DEVELOPMENT">
+  <parameter name="loginmail" value="oprealaur@yahoo.com"/>
+  <parameter name="restrictedUrl" value="https://careersinwhite.com/Inbox/"/>
+  <parameter name="loginpassword" value="passQA123"/>
+  <listeners>
+    <listener class-name="TestSuites.Listener"/>
+  </listeners>
+  <test thread-count="3" parallel="methods" name="cookies(failed)">
+    <classes>
+      <class name="LoginTestCases.CookiesClearedAskCredentialsTest">
+        <methods>
+          <include name="setup"/>
+          <include name="cleanup"/>
+          <include name="cookiesClearedAskCredentials" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- LoginTestCases.CookiesClearedAskCredentialsTest -->
+    </classes>
+  </test> <!-- cookies(failed) -->
+  <test thread-count="3" parallel="methods" name="security(failed)">
+    <classes>
+      <class name="LoginTestCases.LimitLoginAttemptsTest">
+        <methods>
+          <include name="setup"/>
+          <include name="limitLoginAttempts"/>
+          <include name="cleanup"/>
+        </methods>
+      </class> <!-- LoginTestCases.LimitLoginAttemptsTest -->
+    </classes>
+  </test> <!-- security(failed) -->
+  <test thread-count="3" parallel="methods" name="credentials(failed)">
+    <classes>
+      <class name="LoginTestCases.SpacesBeforePassTest">
+        <methods>
+          <include name="setup"/>
+          <include name="cleanup"/>
+          <include name="spacesBeforePass"/>
+        </methods>
+      </class> <!-- LoginTestCases.SpacesBeforePassTest -->
+      <class name="LoginTestCases.InvalidPassLoginTest">
+        <methods>
+          <include name="setup"/>
+          <include name="invalidPassLogin"/>
+          <include name="cleanup"/>
+        </methods>
+      </class> <!-- LoginTestCases.InvalidPassLoginTest -->
+    </classes>
+  </test> <!-- credentials(failed) -->
+</suite> <!-- Failed suite [LOGIN test scenario] -->

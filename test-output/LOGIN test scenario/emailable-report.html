@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta charset='utf-8'>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">cookies</a></td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">38.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t2">multiple tabs</a></td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">40.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t3">redirects</a></td><td class="numi">6</td><td class="numi">6</td><td class="numi">0</td><td class="numi">0</td><td class="numi">38.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t4">security</a></td><td class="numi">6</td><td class="numi">6</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">41.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t5">credentials</a></td><td class="numi">5</td><td class="numi">5</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">37.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t6">userInterface</a></td><td class="numi">6</td><td class="numi">6</td><td class="numi">0</td><td class="numi">0</td><td class="numi">30.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">27</td><td class="numi">27</td><td class="numi">0</td><td class="numi_attn">4</td><td class="numi">227.4 seconds</td><td colspan="2">&nbsp;</td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr id="t1"><th colspan="5">cookies &#8212; failed</th></tr>
+<tr class="failedodd"><td>LoginTestCases.CookiesClearedAskCredentialsTest</td><td><a href="#m1"><b>cookiesClearedAskCredentials</b> (cookies) </a></td><td class="numi">1</td><td>1656596026385</td><td class="numi">34814</td></tr>
+<tr><th colspan="5">cookies &#8212; passed</th></tr>
+<tr class="passedodd"><td>LoginTestCases.PassNotInCookiesTest</td><td><a href="#m2"><b>passNotInCookies</b> (cookies) </a></td><td class="numi">1</td><td>1656596026385</td><td class="numi">14672</td></tr>
+<tr class="passedeven"><td>LoginTestCases.LoginWorksWithoutCookiesTest</td><td><a href="#m3"><b>loginWorksWithoutCookies</b> (cookies) </a></td><td class="numi">1</td><td>1656596026385</td><td class="numi">28984</td></tr>
+<tr id="t2"><th colspan="5">multiple tabs &#8212; passed</th></tr>
+<tr class="passedodd"><td>LoginTestCases.MultipleAccountsSameBrowserTest</td><td><a href="#m4"><b>multipleAccountsSameBrowser</b> (grid1) </a></td><td class="numi">1</td><td>1656596062441</td><td class="numi">21977</td></tr>
+<tr class="passedeven"><td>LoginTestCases.MultipleBrowsersTest</td><td><a href="#m5"><b>multipleBrowsers</b> (grid2) </a></td><td class="numi">1</td><td>1656596085137</td><td class="numi">16809</td></tr>
+<tr id="t3"><th colspan="5">redirects &#8212; passed</th></tr>
+<tr class="passedodd"><td>LoginTestCases.BackButtonLoginTest</td><td><a href="#m6"><b>backButtonLogin</b> (redirects) </a></td><td class="numi">1</td><td>1656596103336</td><td class="numi">24269</td></tr>
+<tr class="passedeven"><td>LoginTestCases.BackButtonLogoutTest</td><td><a href="#m7"><b>backButtonLogout</b> (redirects) </a></td><td class="numi">1</td><td>1656596103391</td><td class="numi">18152</td></tr>
+<tr class="passedodd"><td>LoginTestCases.EnterDoesSignInTest</td><td><a href="#m8"><b>enterDoesSignin</b> (redirects) </a></td><td class="numi">1</td><td>1656596103659</td><td class="numi">14893</td></tr>
+<tr class="passedeven"><td>LoginTestCases.LogoutRedirectToHomeTest</td><td><a href="#m9"><b>logoutRedirectToHome</b> (redirects) </a></td><td class="numi">1</td><td>1656596129702</td><td class="numi">10654</td></tr>
+<tr class="passedodd"><td>LoginTestCases.LoginRedirectsHomeTest</td><td><a href="#m10"><b>loginRedirectHome</b> (redirects) </a></td><td class="numi">1</td><td>1656596124144</td><td class="numi">13968</td></tr>
+<tr class="passedeven"><td>LoginTestCases.ForgotPassOpensTest</td><td><a href="#m11"><b>forgotPassOpens</b> (redirects) </a></td><td class="numi">1</td><td>1656596120069</td><td class="numi">7688</td></tr>
+<tr id="t4"><th colspan="5">security &#8212; failed</th></tr>
+<tr class="failedodd"><td>LoginTestCases.LimitLoginAttemptsTest</td><td><a href="#m12"><b>limitLoginAttempts</b> (security) </a></td><td class="numi">1</td><td>1656596141749</td><td class="numi">11093</td></tr>
+<tr><th colspan="5">security &#8212; passed</th></tr>
+<tr class="passedodd"><td>LoginTestCases.PassEncryptedTest</td><td><a href="#m13"><b>passEncrypted</b> (security) </a></td><td class="numi">1</td><td>1656596154385</td><td class="numi">15126</td></tr>
+<tr class="passedeven"><td>LoginTestCases.CheckForSSLTest</td><td><a href="#m14"><b>checkForSSLCertificate</b> (security) </a></td><td class="numi">1</td><td>1656596141782</td><td class="numi">13381</td></tr>
+<tr class="passedodd"><td>LoginTestCases.TimeTakenToLogInTest</td><td><a href="#m15"><b>timeTakentoLogIn</b> (security) </a></td><td class="numi">1</td><td>1656596157034</td><td class="numi">14515</td></tr>
+<tr class="passedeven"><td>LoginTestCases.PageURLnoLoginTest</td><td><a href="#m16"><b>pageURLnoLogin</b> (security) </a></td><td class="numi">1</td><td>1656596141492</td><td class="numi">10417</td></tr>
+<tr class="passedodd"><td>LoginTestCases.VerifyIDinRequestTest</td><td><a href="#m17"><b>verifyIDinRequest</b> (security) </a></td><td class="numi">1</td><td>1656596171393</td><td class="numi">9980</td></tr>
+<tr class="passedeven"><td>LoginTestCases.PassNoDecipherTest</td><td><a href="#m18"><b>passNoDecipher</b> (security) </a></td><td class="numi">1</td><td>1656596155790</td><td class="numi">15375</td></tr>
+<tr id="t5"><th colspan="5">credentials &#8212; failed</th></tr>
+<tr class="failedodd"><td>LoginTestCases.InvalidPassLoginTest</td><td><a href="#m19"><b>invalidPassLogin</b> (credentials) </a></td><td class="numi">1</td><td>1656596182308</td><td class="numi">19284</td></tr>
+<tr class="failedeven"><td>LoginTestCases.SpacesBeforePassTest</td><td><a href="#m20"><b>spacesBeforePass</b> (credentials) </a></td><td class="numi">1</td><td>1656596195985</td><td class="numi">5883</td></tr>
+<tr><th colspan="5">credentials &#8212; passed</th></tr>
+<tr class="passedodd"><td>LoginTestCases.ValidCredentialsLoginTest</td><td><a href="#m21"><b>validCredentialsLogin</b> (credentials) </a></td><td class="numi">1</td><td>1656596204524</td><td class="numi">14111</td></tr>
+<tr class="passedeven"><td>LoginTestCases.UserCaseSensitiveTest</td><td><a href="#m22"><b>userCaseSensitive</b> (credentials) </a></td><td class="numi">1</td><td>1656596204229</td><td class="numi">14764</td></tr>
+<tr class="passedodd"><td>LoginTestCases.BlankLoginTest</td><td><a href="#m23"><b>blankLogin</b> (credentials) </a></td><td class="numi">1</td><td>1656596182398</td><td class="numi">8029</td></tr>
+<tr class="passedeven"><td>LoginTestCases.InvalidUsernameLoginTest</td><td><a href="#m24"><b>invalidUsernameLogin</b> (credentials) </a></td><td class="numi">1</td><td>1656596192790</td><td class="numi">12880</td></tr>
+<tr class="passedodd"><td>LoginTestCases.InvalidCredentialsLoginTest</td><td><a href="#m25"><b>invalidCredentialsLogin</b> (credentials) </a></td><td class="numi">1</td><td>1656596182618</td><td class="numi">11487</td></tr>
+<tr id="t6"><th colspan="5">userInterface &#8212; passed</th></tr>
+<tr class="passedodd"><td>LoginTestCases.LoginContainsAllFieldsTest</td><td><a href="#m26"><b>loginContainsAllFields</b> (UI) </a></td><td class="numi">1</td><td>1656596221601</td><td class="numi">6701</td></tr>
+<tr class="passedeven"><td>LoginTestCases.TabFunctionalityTest</td><td><a href="#m27"><b>tabFunctionality</b> (UI) </a></td><td class="numi">1</td><td>1656596230294</td><td class="numi">6146</td></tr>
+<tr class="passedodd"><td>LoginTestCases.PassCopyPastedTest</td><td><a href="#m28"><b>passCopyPasted</b> (UI) </a></td><td class="numi">1</td><td>1656596221470</td><td class="numi">18366</td></tr>
+<tr class="passedeven"><td>LoginTestCases.ValidPlaceholdersTest</td><td><a href="#m29"><b>validPlaceholders</b> (UI) </a></td><td class="numi">1</td><td>1656596240951</td><td class="numi">6990</td></tr>
+<tr class="passedodd"><td>LoginTestCases.ValidationMessageDisplayedTest</td><td><a href="#m30"><b>validationMessageDisplayed</b> (UI) </a></td><td class="numi">1</td><td>1656596238015</td><td class="numi">11716</td></tr>
+<tr class="passedeven"><td>LoginTestCases.FocusedOnUsernameTest</td><td><a href="#m31"><b>focusedOnUsername</b> (UI) </a></td><td class="numi">1</td><td>1656596221394</td><td class="numi">17982</td></tr>
+</table>
+<h1>cookies</h1>
+<h2 id="m1">LoginTestCases.CookiesClearedAskCredentialsTest:cookiesClearedAskCredentials</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>https://careersinwhite.com/Inbox/</td>
+</tr>
+<tr><td>
+<div class="stacktrace">java.lang.AssertionError: null
+	at LoginTestCases.CookiesClearedAskCredentialsTest.cookiesClearedAskCredentials(CookiesClearedAskCredentialsTest.java:52)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 12 stack frames</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">LoginTestCases.PassNotInCookiesTest:passNotInCookies</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">LoginTestCases.LoginWorksWithoutCookiesTest:loginWorksWithoutCookies</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>multiple tabs</h1>
+<h2 id="m4">LoginTestCases.MultipleAccountsSameBrowserTest:multipleAccountsSameBrowser</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">LoginTestCases.MultipleBrowsersTest:multipleBrowsers</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>redirects</h1>
+<h2 id="m6">LoginTestCases.LoginRedirectsHomeTest:loginRedirectHome</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">LoginTestCases.BackButtonLoginTest:backButtonLogin</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">LoginTestCases.BackButtonLogoutTest:backButtonLogout</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">LoginTestCases.EnterDoesSignInTest:enterDoesSignin</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">LoginTestCases.ForgotPassOpensTest:forgotPassOpens</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">LoginTestCases.LogoutRedirectToHomeTest:logoutRedirectToHome</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>security</h1>
+<h2 id="m12">LoginTestCases.LimitLoginAttemptsTest:limitLoginAttempts</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: null
+	at LoginTestCases.LimitLoginAttemptsTest.limitLoginAttempts(LimitLoginAttemptsTest.java:47)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 12 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">LoginTestCases.PageURLnoLoginTest:pageURLnoLogin</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">LoginTestCases.VerifyIDinRequestTest:verifyIDinRequest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">LoginTestCases.PassEncryptedTest:passEncrypted</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">LoginTestCases.PassNoDecipherTest:passNoDecipher</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">LoginTestCases.CheckForSSLTest:checkForSSLCertificate</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">LoginTestCases.TimeTakenToLogInTest:timeTakentoLogIn</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>credentials</h1>
+<h2 id="m19">LoginTestCases.InvalidPassLoginTest:invalidPassLogin</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: null
+	at LoginTestCases.InvalidPassLoginTest.invalidPassLogin(InvalidPassLoginTest.java:41)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 12 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">LoginTestCases.SpacesBeforePassTest:spacesBeforePass</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: expected [0] but found [10]
+	at LoginTestCases.SpacesBeforePassTest.spacesBeforePass(SpacesBeforePassTest.java:27)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 16 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">LoginTestCases.InvalidCredentialsLoginTest:invalidCredentialsLogin</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m22">LoginTestCases.ValidCredentialsLoginTest:validCredentialsLogin</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m23">LoginTestCases.UserCaseSensitiveTest:userCaseSensitive</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">LoginTestCases.BlankLoginTest:blankLogin</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">LoginTestCases.InvalidUsernameLoginTest:invalidUsernameLogin</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>userInterface</h1>
+<h2 id="m26">LoginTestCases.LoginContainsAllFieldsTest:loginContainsAllFields</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">LoginTestCases.TabFunctionalityTest:tabFunctionality</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">LoginTestCases.PassCopyPastedTest:passCopyPasted</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m29">LoginTestCases.ValidationMessageDisplayedTest:validationMessageDisplayed</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m30">LoginTestCases.ValidPlaceholdersTest:validPlaceholders</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m31">LoginTestCases.FocusedOnUsernameTest:focusedOnUsername</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

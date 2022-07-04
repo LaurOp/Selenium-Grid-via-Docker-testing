@@ -21,122 +21,129 @@
     <parameter name="loginpassword" value="passQA123"/>
     <parameter name="restrictedUrl" value="https://careersinwhite.com/Inbox/"/>
     <test name="cookies">
-<!--        <classes>-->
-<!--            <class name="LoginTestCases.CookiesClearedAskCredentialsTest"/>-->
-<!--            <class name="LoginTestCases.LoginWorksWithoutCookiesTest"/>-->
-<!--            <class name="LoginTestCases.PassNotInCookiesTest"/>-->
-<!--        </classes>-->
+        <classes>
+            <class name="LoginTestCases.CookiesClearedAskCredentialsTest"/>
+            <class name="LoginTestCases.LoginWorksWithoutCookiesTest"/>
+            <class name="LoginTestCases.PassNotInCookiesTest"/>
+        </classes>
 
 <!--        ECHIVALENT CU -->
 
-        <groups>
-            <run>
-                <include name="cookies"/>
-            </run>
-        </groups>
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="cookies"/>-->
+<!--            </run>-->
+<!--        </groups>-->
     </test>
 
 
     <parameter name="loginmail" value="oprealaur@yahoo.com"/>
     <parameter name="loginpassword" value="passQA123"/>
     <test name="multiple tabs">
-        <groups>
-            <run>
-                <include name="grid1"/>
-                <include name="grid2"/>
-            </run>
-        </groups>
+        <classes>
+            <class name="LoginTestCases.MultipleAccountsSameBrowserTest"/>
+            <class name="LoginTestCases.MultipleBrowsersTest"/>
+        </classes>
+
+<!--        ECHIVALENT CU-->
+
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="grid1"/>-->
+<!--                <include name="grid2"/>-->
+<!--            </run>-->
+<!--        </groups>-->
     </test>
 
     <parameter name="loginmail" value="oprealaur@yahoo.com"/>
     <parameter name="loginpassword" value="passQA123"/>
     <test name="redirects">
-<!--        <classes>-->
-<!--            <class name="LoginTestCases.BackButtonLoginTest"/>-->
-<!--            <class name="LoginTestCases.BackButtonLogoutTest"/>-->
-<!--            <class name="LoginTestCases.EnterDoesSignInTest"/>-->
-<!--            <class name="LoginTestCases.ForgotPassOpensTest"/>-->
-<!--            <class name="LoginTestCases.LoginRedirectsHomeTest"/>-->
-<!--            <class name="LoginTestCases.LogoutRedirectToHomeTest"/>-->
-<!--&lt;!&ndash;                        <class name="LoginTestCases.CreateAccRedirectsTest"/>   commented until I update browser version in grid &ndash;&gt;-->
-<!--        </classes>-->
+        <classes>
+            <class name="LoginTestCases.BackButtonLoginTest"/>
+            <class name="LoginTestCases.BackButtonLogoutTest"/>
+            <class name="LoginTestCases.EnterDoesSignInTest"/>
+            <class name="LoginTestCases.ForgotPassOpensTest"/>
+            <class name="LoginTestCases.LoginRedirectsHomeTest"/>
+            <class name="LoginTestCases.LogoutRedirectToHomeTest"/>
+<!--                        <class name="LoginTestCases.CreateAccRedirectsTest"/>   commented until I update browser version in grid -->
+        </classes>
 
         <!--        ECHIVALENT CU -->
 
-        <groups>
-            <run>
-                <include name="redirects"/>
-            </run>
-        </groups>
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="redirects"/>-->
+<!--            </run>-->
+<!--        </groups>-->
     </test>
 
 
     <parameter name="loginmail" value="oprealaur@yahoo.com"/>
     <parameter name="loginpassword" value="passQA123"/>
     <test name="security">
-<!--        <classes>-->
-<!--            <class name="LoginTestCases.CheckForSSLTest"/>-->
-<!--            <class name="LoginTestCases.LimitLoginAttemptsTest"/>-->
-<!--            <class name="LoginTestCases.PageURLnoLoginTest"/>-->
-<!--            <class name="LoginTestCases.PassEncryptedTest"/>-->
-<!--            <class name="LoginTestCases.PassNoDecipherTest"/>-->
-<!--            <class name="LoginTestCases.TimeTakenToLogInTest"/>-->
-<!--            <class name="LoginTestCases.VerifyIDinRequestTest"/>-->
-<!--&lt;!&ndash;                        <class name="LoginTestCases.WaysToRetrievePassTest"/>    commented since it's spamming my email account with recovery mails, but works   &ndash;&gt;-->
-<!--        </classes>-->
+        <classes>
+            <class name="LoginTestCases.CheckForSSLTest"/>
+            <class name="LoginTestCases.LimitLoginAttemptsTest"/>
+            <class name="LoginTestCases.PageURLnoLoginTest"/>
+            <class name="LoginTestCases.PassEncryptedTest"/>
+            <class name="LoginTestCases.PassNoDecipherTest"/>
+            <class name="LoginTestCases.TimeTakenToLogInTest"/>
+            <class name="LoginTestCases.VerifyIDinRequestTest"/>
+<!--                        <class name="LoginTestCases.WaysToRetrievePassTest"/>    commented since it's spamming my email account with recovery mails, but works   -->
+        </classes>
 
         <!--        ECHIVALENT CU -->
 
-        <groups>
-            <run>
-                <include name="security"/>
-            </run>
-        </groups>
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="security"/>-->
+<!--            </run>-->
+<!--        </groups>-->
     </test>
 
 
     <parameter name="loginmail" value="oprealaur@yahoo.com"/>
     <parameter name="loginpassword" value="passQA123"/>
     <test name="credentials">
-<!--        <classes>-->
-<!--            <class name="LoginTestCases.BlankLoginTest"/>-->
-<!--            <class name="LoginTestCases.InvalidCredentialsLoginTest"/>-->
-<!--            <class name="LoginTestCases.InvalidPassLoginTest"/>-->
-<!--            <class name="LoginTestCases.InvalidUsernameLoginTest"/>-->
-<!--            <class name="LoginTestCases.SpacesBeforePassTest"/>-->
-<!--            <class name="LoginTestCases.UserCaseSensitiveTest"/>-->
-<!--            <class name="LoginTestCases.ValidCredentialsLoginTest"/>-->
-<!--        </classes>-->
+        <classes>
+            <class name="LoginTestCases.BlankLoginTest"/>
+            <class name="LoginTestCases.InvalidCredentialsLoginTest"/>
+            <class name="LoginTestCases.InvalidPassLoginTest"/>
+            <class name="LoginTestCases.InvalidUsernameLoginTest"/>
+            <class name="LoginTestCases.SpacesBeforePassTest"/>
+            <class name="LoginTestCases.UserCaseSensitiveTest"/>
+            <class name="LoginTestCases.ValidCredentialsLoginTest"/>
+        </classes>
 
             <!--        ECHIVALENT CU -->
 
-            <groups>
-                <run>
-                    <include name="credentials"/>
-                </run>
-            </groups>
+<!--            <groups>-->
+<!--                <run>-->
+<!--                    <include name="credentials"/>-->
+<!--                </run>-->
+<!--            </groups>-->
     </test>
 
 
     <parameter name="loginmail" value="oprealaur@yahoo.com"/>
     <parameter name="loginpassword" value="passQA123"/>
     <test name="userInterface">
-<!--        <classes>-->
-<!--            <class name="LoginTestCases.FocusedOnUsernameTest"/>-->
-<!--            <class name="LoginTestCases.LoginContainsAllFieldsTest"/>-->
-<!--            <class name="LoginTestCases.PassCopyPastedTest"/>-->
-<!--            <class name="LoginTestCases.TabFunctionalityTest"/>-->
-<!--            <class name="LoginTestCases.ValidationMessageDisplayedTest"/>-->
-<!--            <class name="LoginTestCases.ValidPlaceholdersTest"/>-->
-<!--        </classes>-->
+        <classes>
+            <class name="LoginTestCases.FocusedOnUsernameTest"/>
+            <class name="LoginTestCases.LoginContainsAllFieldsTest"/>
+            <class name="LoginTestCases.PassCopyPastedTest"/>
+            <class name="LoginTestCases.TabFunctionalityTest"/>
+            <class name="LoginTestCases.ValidationMessageDisplayedTest"/>
+            <class name="LoginTestCases.ValidPlaceholdersTest"/>
+        </classes>
 
         <!--        ECHIVALENT CU -->
 
-        <groups>
-            <run>
-                <include name="UI"/>
-            </run>
-        </groups>
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="UI"/>-->
+<!--            </run>-->
+<!--        </groups>-->
     </test>
 
 </suite>
